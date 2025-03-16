@@ -43,7 +43,7 @@ builder.Services.AddScoped<ICacheService>(sp =>
 {
     var cache = sp.GetRequiredService<IDistributedCache>();
     var redis = sp.GetRequiredService<IConnectionMultiplexer>();
-    return new RedisCacheService(cache, redis, redisConfig?.InstanceName ?? "SchnellKuendigen:");
+    return new RedisCacheService(cache, redis, redisConfig?.InstanceName ?? "DLXHub:");
 });
 
 // Configure PostgreSQL
